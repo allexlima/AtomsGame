@@ -14,7 +14,7 @@ SoundIntro.volume-=0.8
 SoundBackground.volume-=0.8
 
 //Variáveis do jogo
-var canvas, context, LARGURA, ALTURA, img, GameStatus = 0, record, GRAVITY = 2, life = 3, score = 0, sound = false, frames = 0,
+var canvas, context, LARGURA, ALTURA, img, GameStatus = 0, record, GRAVITY = 2, life = 3, score = 0, aux=0, sound = false, frames = 0,
 
 quiz = {
     name: " ",
@@ -33,26 +33,40 @@ elemento = {
     baseLevel: 100,
 
     insere: function(){
-        this._obs.push({
-            width: 150,
-            height: 150,
-            gravity: GRAVITY,
-            velocity: 0,
-            x: 300 + Math.floor(571 * Math.random()),
-            y: 0,
-            name: PeriodTable[Math.floor(PeriodTable.length * Math.random())].name,
-            simbol: PeriodTable[Math.floor(PeriodTable.length * Math.random())].id
-        });
+	    if(aux == 0 && (this._obs.length > Math.floor(3 * Math.random()))){
+		    this._obs.push({
+			    width: 150,
+				height: 150,
+				gravity: GRAVITY,
+				velocity: 0,
+				x: 300 + Math.floor(571 * Math.random()),
+				y: Math.floor(50 * Math.random()),
+				name: quiz.name,
+				simbol: quiz.simbol
+			});    
+			aux = 1;    	
+		}else{
+	    	this._obs.push({
+	            width: 150,
+	            height: 150,
+	            gravity: GRAVITY,
+	            velocity: 0,
+	            x: 300 + Math.floor(571 * Math.random()),
+	            y: 0,
+	            name: PeriodTable[Math.floor(PeriodTable.length * Math.random())].name,
+	            simbol: PeriodTable[Math.floor(PeriodTable.length * Math.random())].id
+	        });   
+        } 	       
         this.elementDelay = this.baseLevel +  Math.floor(51 * Math.random());
     },
 
     update: function(){
-        if(this.elementDelay == 0) {
+        if(this.elementDelay == 0) {   	
             this.insere();
             if(this.baseLevel >= 30)
                 this.baseLevel--;
         }else
-            this.elementDelay--;
+            this.elementDelay--;      
 
         for(var i = 0, tam = this._obs.length; i < tam; i++) {
             var obs = this._obs[i];
@@ -68,6 +82,7 @@ elemento = {
                     elementSort();
                     life--;
                     SoundExplosion.play();
+                    aux = 0;
                 }
                 if(life == 0)
                     SoundLose.play();
@@ -104,6 +119,7 @@ elemento = {
                     GRAVITY += 0.1;
                     elementSort();
                     SoundUp.play();
+                    aux = 0;
                 }else{
                     if(life > 0)
                         life--;
