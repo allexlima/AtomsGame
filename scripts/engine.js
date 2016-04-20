@@ -188,6 +188,8 @@ function play(){
             score = 0;
             life = 3;
             elemento._obs = [];
+            aux = 0;
+            GRAVITY = 2;
             elementSort();
             alert("Olá!\n\nEste jogo foi desenvolvido pelos alunos de Engenharia da Computação: Allex Lima, Daniel Bispo, Paulo Moraes e Renan Barroncas!\n\nTrabalho solicitado pela Profª Drª Rebeca Freire.\n\n\nDivirta-se!")
             GameStatus = Status.playing;
