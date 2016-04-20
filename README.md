@@ -4,6 +4,5 @@ Jogo desenvolvido em Javascript e HTM5 com a finalidade de ajudar crianças e ad
 
 Busca-se ainda ampliar o projeto, de forma a contribuir no ensino da química por meio de jogos digitais atrativos ao público infantil. 
 
-*Projeto orientado pela Profª Drª Rebecca Freire.
-
-*Integrantes: Allex Lima, Daniel Bispo, Paulo Moraes e Renan Barroncas.
+* Projeto orientado pela Profª Drª Rebecca Freire.
+* Integrantes: Allex Lima, Daniel Bispo, Paulo Moraes e Renan Barroncas.
