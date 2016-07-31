@@ -1,41 +1,38 @@
+*{
+    outline: none;
+}
+
 /*-- Social Buttons | Begin --*/
 
 .social-badges{
+    display: inline-flex;
     list-style: none;
     vertical-align: middle;
     margin: 5px;
 }
-.social-badges > li > a {
-    padding: 0em 0.2em 0em 0.2em;
-    margin: 0;
-}
-.social-badges .social{
-    font-size: 1.8em;
-    margin: 0;
-    color: #ffffff;
-}
-.social-badges .social > *:hover{
-    color: lightgray;
+.social-badges li{
+    margin: 5px;
 }
 
 /*-- Menu Bar Style | Begin --*/
 
 .sticky{
-
+    padding: 1em;
     width: 100%;
 }
 
-.top-bar, .top-bar ul{
-    background: /*#524e55*/transparent;
+.title-bar, .top-bar, .top-bar ul{
+    background: /*#524e55*/ transparent;
 }
 
-.top-bar ul a:not(.active){
-    text-shadow: 0px 1px 2px #524e55;
+.top-bar li a:not(.active){
+    text-shadow: 0px 1px 3px #000;
+    transition: All 0.4s ease-in-out
 }
 
 #top-bar li a:not(.active):hover{
     color: #fba82e;
-    transition: All 0.4s ease-in-out
+    text-shadow: none;
 }
 
 #top-bar .active{
@@ -56,5 +53,61 @@
 /*--- Home Background | Begin ---*/
 
 .secHome{
-    background: url("../img/bg-SpaceCatOk.jpg") no-repeat center center fixed;
+    background: url("../img/bg-SpaceCatOk.jpg") #1c3355 no-repeat center center fixed;
 }
+
+.secHome #logo{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin:1.7em 0.7em auto auto;
+}
+.secHome #logo img{
+    width: 100%;
+    height: 100%;
+    max-width: 592px;
+    max-height: 312px;
+}
+
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    #top-bar ul.menu{
+        list-style: none;
+    }
+    #top-bar ul.menu li{
+        display: list-item;
+        width: auto;
+        margin: auto;
+
+    }
+    #top-bar{
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1em;
+        border-radius: 5px;
+    }
+    #top-bar .active{
+        border-radius: 5px;
+    }
+    .top-bar-right{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .secHome #logo{
+        margin:5em auto;
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
