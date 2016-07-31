@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <script src="scripts/effects.js"></script>
 </head>
 <body>
 
@@ -35,7 +36,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <section class="page secHome" id="home" data-magellan-target="home">
-    <div data-sticky-container>
+    <div id="MainMenu" data-sticky-container>
         <div id="header-bar" data-sticky data-sticky-on="small">
             <div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="medium">
                 <button class="menu-icon" type="button" data-toggle></button>
@@ -52,28 +53,45 @@
                         <li><a href="#">Research</a></li>
                     </ul>
                 </div>
-
-                <div class="top-bar-right">
-                    <ul class="social-badges text-center">
-                        <li><a class="github-button" href="https://github.com/AtomsGame" data-style="mega" data-count-href="/AtomsGame/followers" data-count-api="/users/AtomsGame#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a></li>
-                        <li><div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
 
+
+        <ul class="social-badges text-center">
+            <li><a class="github-button" href="https://github.com/AtomsGame" data-style="mega" data-count-href="/AtomsGame/followers" data-count-api="/users/AtomsGame#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a></li>
+            <li><div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div></li>
+        </ul>
+
+
     <div id="logo" class="row">
-        <div class="small-12 medium-12 large-12 small-centered menu-centered large-centered columns">
+        <div class="text-center columns">
             <img src="img/logo.png" alt="AtomsGame">
         </div>
     </div>
 
 </section>
 
-<!---section class="page secPlayIt" id="playit" data-magellan-target="playit">
-    play
-</section-->
+<section class="page secPlayIt" id="playit" data-magellan-target="playit">
+    <div class="small-12 text-center vertical show-for-portrait" style="padding:5em 3em">
+        <img src="img/landscapemode.png">
+        <br>
+        <h4>This game works only in landscape mode :)</h4>
+        <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
+    </div>
+    <div class="row hide-for-portrait">
+        <!-- SoundTrack -->
+        <audio id="intro" src="sound/intro.mp3" preload></audio>
+        <audio id="background" src="sound/minecraft_just_jump.mp3" preload loop></audio>
+        <audio id="explosion" src="sound/boom.mp3" preload></audio>
+        <audio id="up" src="sound/up.mp3" preload></audio>
+        <audio id="lose" src="sound/lose.mp3" preload></audio>
+
+        <div class="large-12 large-centered large-text-center">
+            <div id="gamePlay"></div>
+        </div>
+    </div>
+</section>
 
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -81,6 +99,8 @@
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/app.js"></script>
+<script src="scripts/periodic_table.js"></script>
+<script src="scripts/engine.js"></script>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+
 *{
     outline: none;
 }
@@ -9,6 +12,9 @@
     list-style: none;
     vertical-align: middle;
     margin: 5px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 .social-badges li{
     margin: 5px;
@@ -19,6 +25,7 @@
 .sticky{
     padding: 1em;
     width: 100%;
+
 }
 
 .title-bar, .top-bar, .top-bar ul{
@@ -26,13 +33,13 @@
 }
 
 .top-bar li a:not(.active){
-    text-shadow: 0px 1px 3px #000;
-    transition: All 0.4s ease-in-out
+    text-shadow: 0px 1px 3px #666;
+    transition: All 0.4s ease-in-out;
+    font-weight: bold;
 }
 
 #top-bar li a:not(.active):hover{
     color: #fba82e;
-    text-shadow: none;
 }
 
 #top-bar .active{
@@ -70,6 +77,28 @@
     max-height: 312px;
 }
 
+/*--- PlayIt Background | Begin ---*/
+
+.secPlayIt{
+    background: url("../img/bg-game.png") #fff repeat;
+}
+
+.secPlayIt canvas{
+    position: relative;
+    top: 1.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow:3px 2px 15px 2px #666;
+    border: 2px dashed #fff;
+}
+
+
+
+
+
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -98,6 +127,7 @@
         margin:5em auto;
     }
 }
+
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
