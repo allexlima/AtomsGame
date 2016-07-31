@@ -1,0 +1,60 @@
+/*-- Social Buttons | Begin --*/
+
+.social-badges{
+    list-style: none;
+    vertical-align: middle;
+    margin: 5px;
+}
+.social-badges > li > a {
+    padding: 0em 0.2em 0em 0.2em;
+    margin: 0;
+}
+.social-badges .social{
+    font-size: 1.8em;
+    margin: 0;
+    color: #ffffff;
+}
+.social-badges .social > *:hover{
+    color: lightgray;
+}
+
+/*-- Menu Bar Style | Begin --*/
+
+.sticky{
+
+    width: 100%;
+}
+
+.top-bar, .top-bar ul{
+    background: /*#524e55*/transparent;
+}
+
+.top-bar ul a:not(.active){
+    text-shadow: 0px 1px 2px #524e55;
+}
+
+#top-bar li a:not(.active):hover{
+    color: #fba82e;
+    transition: All 0.4s ease-in-out
+}
+
+#top-bar .active{
+    background: #fba82e;
+    font-weight: bold;
+    transition: All 0.4s ease-in;
+}
+.top-bar, .top-bar ul a{
+    color: #ffffff;
+}
+
+/*--- Page Section Layout | Begin ---*/
+
+.page{
+    height: 100%;
+}
+
+/*--- Home Background | Begin ---*/
+
+.secHome{
+    background: url("../img/bg-SpaceCatOk.jpg") no-repeat center center fixed;
+}
