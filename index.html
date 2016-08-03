@@ -36,7 +36,9 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <section class="page secHome" id="home" data-magellan-target="home">
+
     <div id="MainMenu" data-sticky-container>
+
         <div id="header-bar" data-sticky data-sticky-on="small">
             <div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="medium">
                 <button class="menu-icon" type="button" data-toggle></button>
@@ -56,17 +58,17 @@
             </div>
         </div>
 
-        <div class="top-bar-left">
+        <div class="top-bar-left show-for-medium">
             <ul class="social-badges text-center">
                 <li><a class="github-button" href="https://github.com/AtomsGame" data-style="mega" data-count-href="/AtomsGame/followers" data-count-api="/users/AtomsGame#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a></li>
                 <li><div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div></li>
             </ul>
         </div>
     </div>
-    
 
-    <div id="logo" class="row">
-        <div class="text-center columns">
+
+    <div id="logo" class="row hide-for-landscape">
+        <div class="small-12 columns">
             <img src="img/logo.png" alt="AtomsGame">
         </div>
     </div>
@@ -74,12 +76,15 @@
 </section>
 
 <section class="page secPlayIt" id="playit" data-magellan-target="playit">
-    <div class="small-12 text-center vertical show-for-portrait" style="padding:5em 3em">
-        <img src="img/landscapemode.png">
-        <br>
-        <h4>This game works only in landscape mode :)</h4>
-        <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
+
+    <div class="row show-for-portrait" style="padding:5em 3em">
+        <div class="justcell small-12 medium-12">
+            <img src="img/landscapemode.png">
+            <h4>This game works only in landscape mode :)</h4>
+            <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
+        </div>
     </div>
+
     <div class="row hide-for-portrait">
         <!-- SoundTrack -->
         <audio id="intro" src="sound/intro.mp3" preload></audio>
