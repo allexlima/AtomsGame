@@ -108,6 +108,8 @@
 }
 .secTeam .people-team figure ul{
     list-style: none;
+    text-align: center;
+    margin: auto;
 }
 .secTeam .people-team figure ul li{
     display: inline-block;
@@ -278,7 +280,7 @@ footer span{
         font-size: 1.5em;
     }
     .secAbout .textAbout{
-        padding: 0em;
+        padding: 1.2em;
     }
     .secTeam{
         background-size: auto;
