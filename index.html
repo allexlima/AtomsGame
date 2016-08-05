@@ -26,6 +26,7 @@
 </head>
 <body>
 
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -50,19 +51,12 @@
                     <ul class="menu" data-magellan >
                         <li><a href="#home">Home</a></li>
                         <li><a href="#playit">Play it</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Research</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#about">About</a></li>
+                        <!---li><a href="#research">Research</a></li--->
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <div class="top-bar-left show-for-medium">
-            <ul class="social-badges text-center">
-                <li><a class="github-button" href="https://github.com/AtomsGame" data-style="mega" data-count-href="/AtomsGame/followers" data-count-api="/users/AtomsGame#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a></li>
-                <li><div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div></li>
-            </ul>
         </div>
     </div>
 
@@ -77,12 +71,10 @@
 
 <section class="page secPlayIt" id="playit" data-magellan-target="playit">
 
-    <div class="row show-for-portrait" style="padding:5em 3em">
-        <div class="justcell small-12 medium-12">
-            <img src="img/landscapemode.png">
-            <h4>This game works only in landscape mode :)</h4>
-            <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
-        </div>
+    <div class="justcell show-for-portrait">
+        <img src="img/landscapemode.png">
+        <h4>This game works only in landscape mode :)</h4>
+        <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
     </div>
 
     <div class="row hide-for-portrait">
@@ -99,14 +91,63 @@
     </div>
 </section>
 
+<section class="page secTeam" id="team" data-magellan-target="team"></section>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<section class="page secAbout" id="about" data-magellan-target="about">
+    <div class="row text-center items-po">
+        <div class="small-12 medium-4 large-4 columns">
+            <figure>
+                <img src="img/abacus.png"/>
+            </figure>
+            <h4>Play it</h4>
+        </div>
+        <div class="small-12 medium-4 large-4 columns">
+            <figure>
+                <img src="img/science.png"/>
+            </figure>
+            <h4>Discover</h4>
+        </div>
+        <div class="small-12 medium-4 large-4 columns">
+            <figure>
+                <img src="img/book.png"/>
+            </figure>
+            <h4>Learn</h4>
+        </div>
+    </div>
+    <div class="row text-justify textAbout">
+        &emsp;Atom's Game is developed with Javascript and HTML5 which aims to help children and teenagers in
+        the learning of elements of the periodic table. This project was presented in National
+        Institute of Amazon Researches (INPA) for teachers and students from public schools in
+        Manaus, AM - Brazil.
+        The project team, aims expand the game in order to contribute
+        with the chemistry learning through digital and attractive games to child audience.
+        <div class="text-center" style="margin-top: 1.5em">
+            <h5>You can help us in this journey!!</h5>
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/AtomsGame" data-style="mega" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a>
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/AtomsGame/AtomsGame" data-icon="octicon-eye" data-style="mega" aria-label="Watch AtomsGame/AtomsGame on GitHub">Watch</a>
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/AtomsGame/AtomsGame/fork" data-icon="octicon-repo-forked" data-style="mega" aria-label="Fork AtomsGame/AtomsGame on GitHub">Fork</a>
+            <br>
+            <div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div>
+        </div>
+    </div>
+</section>
+<!--section class="page secResearch" id="research" data-magellan-target="research"></section-->
+
+<footer>
+    <p>AtomsGame 2016 © All rights reserved.</p>
+    <span>UniNorte Laureate - Computation Department</span>
+</footer>
+
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/app.js"></script>
 <script src="scripts/periodic_table.js"></script>
 <script src="scripts/engine.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </body>
 </html>

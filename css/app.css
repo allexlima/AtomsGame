@@ -1,23 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Sigmar+One);
 @import url(https://fonts.googleapis.com/css?family=Passion+One);
+@import url(https://fonts.googleapis.com/css?family=Hind);
 
 *{
     outline: none;
-}
-
-/*-- Social Buttons | Begin --*/
-
-.social-badges{
-    display: inline-flex;
-    list-style: none;
-    vertical-align: middle;
-    margin: 5px;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-}
-.social-badges li{
-    margin: 5px;
 }
 
 /*-- Menu Bar Style | Begin --*/
@@ -82,10 +68,72 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    border-radius: 5px;
     box-shadow:3px 2px 15px 2px #666;
-    border: 2px dashed #fff;
+    /*border-radius: 5px;
+    border: 2px dashed #fff;*/
 }
+
+/*--- Team Background | Begin ---*/
+/*--- About Background | Begin ---*/
+.secAbout{
+    background: url("../img/monti.png") #060433 center top fixed no-repeat;
+    background-size: 100%;
+    max-height: 1080px;
+    color: #fff;
+    padding: 3em;
+}
+
+.secAbout .items-po figure{
+    background: #fff;
+    padding: 2em;
+    border-radius: 100%;
+    width: 13em;
+    height: 13em;
+    margin: 0 auto 1em auto;
+    position: relative;
+    box-shadow:3px 2px 15px 2px #666;
+}
+.secAbout .items-po img{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+.secAbout .items-po h4{
+    font-family: 'Passion One', cursive;
+    color: #fff;
+    text-shadow: 1px 1px 3px #666;
+}
+.secAbout  .textAbout{
+    padding: 3em;
+    text-shadow: 1px 1px 3px #666;
+    font-size: 1.2em;
+    font-family: 'Hind', sans-serif;
+}
+
+
+/*--- Footer Background | Begin ---*/
+footer{
+    background: url("../img/iPsyl.png") #111 repeat;
+    background-size: 20%;
+    padding: 2em;
+    border-top: 5px solid #0e0e0e;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+}
+footer p{
+    margin-bottom: 0;
+}
+footer span{
+    font-size: 0.8em;
+}
+
 
 
 
@@ -138,6 +186,24 @@
     }
     .secPlayIt .justcell{
         position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 50%;
+        padding: 5px;
+        text-align: center;
+    }
+    .secPlayIt .justcell h4{
+        font-weight: bold;
+    }
+    .secAbout{
+        background-size: auto;
+        overflow-y: auto;
+    }
+    .secAbout .items-po{
+        padding-top: 2em;
     }
 }
 
