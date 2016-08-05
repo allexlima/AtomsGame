@@ -58,7 +58,8 @@
 /*--- PlayIt Background | Begin ---*/
 
 .secPlayIt{
-    background: url("../img/bg-game.png") #000 repeat;
+    background: url("../img/patter.png") #f2f0f6 fixed repeat;
+    background-size: 50%;
 }
 
 .secPlayIt canvas{
@@ -74,6 +75,20 @@
 }
 
 /*--- Team Background | Begin ---*/
+
+.secTeam{
+    background: url("../img/astronaunt.jpg") #fff center top fixed no-repeat;
+    padding: 3em;
+    max-height: 1200px;
+}
+
+.secTeam .people-team figure img{
+    width: 50%;
+}
+
+
+
+
 /*--- About Background | Begin ---*/
 .secAbout{
     background: url("../img/monti.png") #060433 center top fixed no-repeat;
@@ -186,14 +201,16 @@ footer span{
     }
     .secPlayIt .justcell{
         position: absolute;
+        background: #fff;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
-        height: 50%;
-        padding: 5px;
+        height: 65%;
+        padding: 2em;
         text-align: center;
+        box-shadow:3px 2px 15px 2px #666;
     }
     .secPlayIt .justcell h4{
         font-weight: bold;
@@ -205,6 +222,16 @@ footer span{
     .secAbout .items-po{
         padding-top: 2em;
     }
+    .secAbout .items-po div{
+        margin-bottom: 1em;
+    }
+    .secAbout .items-po h4{
+        font-size: 1.5em;
+    }
+    .secAbout .textAbout{
+        padding: 0em;
+    }
+
 }
 
 
@@ -217,7 +244,27 @@ footer span{
 }
 
 /* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .secAbout{
+        background-size: auto;
+        overflow-y: auto;
+    }
+    .secAbout .items-po figure{
+        width: 9em;
+        height: 9em;
+    }
+    .secAbout .items-po img{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+}
 
 /* Large and up */
 @media screen and (min-width: 64em) {}
