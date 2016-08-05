@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="151" column="135" selection-start-line="151" selection-start-column="135" selection-end-line="151" selection-end-column="135" />
+            <state relative-caret-position="450">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -288,12 +288,12 @@
       <workItem from="1470199704720" duration="7193000" />
       <workItem from="1470339997523" duration="852000" />
       <workItem from="1470342528879" duration="664000" />
-      <workItem from="1470369642904" duration="15746000" />
+      <workItem from="1470369642904" duration="15972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65336000" />
+    <option name="totallyTimeSpent" value="65562000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -533,8 +533,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="151" column="135" selection-start-line="151" selection-start-column="135" selection-end-line="151" selection-end-column="135" />
+        <state relative-caret-position="450">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
