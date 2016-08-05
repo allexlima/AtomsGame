@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Allex Lima, Daniel Bispo, Paulo Moraes, Renan Barroncas e Rebecca Freire"/>
+    <meta name="distribution" content="Private">
+    <meta name="rating" content="WebSite">
+    <meta name="theme-color" content="#1c3355">
+
+    <meta property="og:url" content="http://atomsgame.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AtomsGame - The Periodic Table Saga" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:description" content="A game developed to help children improve their chemistry abilities! Let's play it? =D" />
+    <meta property="og:image" content="http://atomsgame.github.io/img/GameScreen.jpg" />
+
+    <meta name="description" content="A game developed with JavaScript that can help children improve their chemistry abilities!" />
+    <title>Atoms Game</title>
+    <link rel="icon" sizes="44x44" href="img/logo.png">
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="scripts/effects.js"></script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1481612788799008";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<section class="page secHome" id="home" data-magellan-target="home">
+    <div id="MainMenu" data-sticky-container>
+        <div id="header-bar" data-sticky data-sticky-on="small">
+            <div class="title-bar" data-responsive-toggle="top-bar" data-hide-for="medium">
+                <button class="menu-icon" type="button" data-toggle></button>
+                <div class="title-bar-title"></div>
+            </div>
+
+            <div class="top-bar">
+                <div id="top-bar" class="top-bar-left">
+                    <ul class="menu" data-magellan >
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#playit">Play it</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-bar-left">
+            <ul class="social-badges text-center">
+                <li><a class="github-button" href="https://github.com/AtomsGame" data-style="mega" data-count-href="/AtomsGame/followers" data-count-api="/users/AtomsGame#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @AtomsGame on GitHub">Follow @AtomsGame</a></li>
+                <li><div class="fb-share-button" data-href="https://atomsgame.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fatomsgame.github.io%2F&amp;src=sdkpreparse">Share</a></div></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div id="logo" class="row">
+        <div class="text-center columns">
+            <img src="img/logo.png" alt="AtomsGame">
+        </div>
+    </div>
+
+</section>
+
+<section class="page secPlayIt" id="playit" data-magellan-target="playit">
+    <div class="small-12 text-center vertical show-for-portrait" style="padding:5em 3em">
+        <img src="img/landscapemode.png">
+        <br>
+        <h4>This game works only in landscape mode :)</h4>
+        <p>For the best experience, we recommend that you play using the Google Chrome browser on your computer.</p>
+    </div>
+    <div class="row hide-for-portrait">
+        <!-- SoundTrack -->
+        <audio id="intro" src="sound/intro.mp3" preload></audio>
+        <audio id="background" src="sound/minecraft_just_jump.mp3" preload loop></audio>
+        <audio id="explosion" src="sound/boom.mp3" preload></audio>
+        <audio id="up" src="sound/up.mp3" preload></audio>
+        <audio id="lose" src="sound/lose.mp3" preload></audio>
+
+        <div class="large-12 large-centered large-text-center">
+            <div id="gamePlay"></div>
+        </div>
+    </div>
+</section>
+
+<section class="page secPlayIt" id="team" data-magellan-target="team">
+    <div style="padding:5em 3em !important">
+        <div class="small-12medium-12 large-12">
+            <h2>ATOMS GAME TEAM</h2>
+            <h4>Computing Engineering Studenty!</h4>
+            <div class="small-04medium-08 large-04">
+                <img src="img/igor.jpg" class="img-circle">
+                <h5 style="color: #fba82e" class="text-center">Paulo Moraes</h5>
+                <p class="text-muted text-center">Desenvolvedor</p>
+          
+                <img src="img/igor.jpg" class="img-circle">
+                <h5 style="color: #fba82e" class="text-center">Paulo Moraes</h5>
+                <p class="text-muted text-center">Desenvolvedor</p>
+            </div>
+        
+    </div>
+</section>
+
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="scripts/periodic_table.js"></script>
+<script src="scripts/engine.js"></script>
+
+</body>
+</html>

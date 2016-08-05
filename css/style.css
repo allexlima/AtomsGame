@@ -1,0 +1,23 @@
+
+.img-circle {
+    border-radius: 50%;
+    display: block;
+    max-width: 15%;
+    height: auto;
+    
+    margin: auto;
+    border: 7px solid #fba82e;
+}
+
+.img-centered {
+    margin: auto;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.auto {
+    margin: 10px 0 10px 0;
+}
+
