@@ -1,25 +1,24 @@
-//debug
+// Debug
 function print(text){
     console.log(text);
 }
 
-//SoundTracks
+// SoundTracks
 SoundIntro = document.getElementById("intro");
 SoundBackground = document.getElementById("background");
 SoundExplosion = document.getElementById("explosion");
 SoundUp = document.getElementById("up");
 SoundLose = document.getElementById("lose");
 
-
 SoundIntro.volume = 0.0;
 SoundBackground.volume = 0.0;
 
-//Variáveis do jogo
-var canvas, context, LARGURA, ALTURA, img, GameStatus = 0, record, GRAVITY = 2, life = 3, score = 0, aux=0, sound = false, frames = 0,
+// Game Variables
+var canvas, context, WIDTH, HEIGHT, img, GameStatus = 0, record, GRAVITY = 2, life = 3, score = 0, aux=0, sound = false, frames = 0,
 
 quiz = {
     name: " ",
-    simbol: null
+    symbol: null
 },
 
 Status = {
@@ -28,12 +27,12 @@ Status = {
 },
 
 
-elemento = {
+elementObj = {
     _obs: [],
     elementDelay: 0,
     baseLevel: 100,
 
-    insere: function(){
+    insert: function(){
 	    if(aux == 0 && (this._obs.length > Math.floor(3 * Math.random()))){
 		    this._obs.push({
 			    width: 150,
@@ -43,11 +42,11 @@ elemento = {
 				x: 300 + Math.floor(571 * Math.random()),
 				y: Math.floor(50 * Math.random()),
 				name: quiz.name,
-				simbol: quiz.simbol
-			});    
-			aux = 1;    	
+				symbol: quiz.symbol
+			});
+			aux = 1;
 		}else{
-	    	this._obs.push({
+		this._obs.push({
 	            width: 150,
 	            height: 150,
 	            gravity: GRAVITY,
@@ -55,31 +54,31 @@ elemento = {
 	            x: 300 + Math.floor(571 * Math.random()),
 	            y: 0,
 	            name: PeriodTable[Math.floor(PeriodTable.length * Math.random())].name,
-	            simbol: PeriodTable[Math.floor(PeriodTable.length * Math.random())].id
-	        });   
-        } 	       
+	            symbol: PeriodTable[Math.floor(PeriodTable.length * Math.random())].id
+	        });
+        }
         this.elementDelay = this.baseLevel +  Math.floor(51 * Math.random());
     },
 
     update: function(){
-        if(this.elementDelay == 0) {   	
-            this.insere();
+        if(this.elementDelay == 0) {
+            this.insert();
             if(this.baseLevel >= 30)
                 this.baseLevel--;
         }else
-            this.elementDelay--;      
+            this.elementDelay--;
 
         for(var i = 0, tam = this._obs.length; i < tam; i++) {
             var obs = this._obs[i];
             obs.velocity += obs.gravity;
             obs.y = obs.velocity;
-            limit = ALTURA - obs.height/2 - 110;
+            limit = HEIGHT - obs.height/2 - 110;
 
             if(obs.y >= limit) {
                 this._obs.splice(i, 1);
                 tam--;
                 i--;
-                if(life > 0 && obs.simbol == quiz.simbol){
+                if(life > 0 && obs.symbol == quiz.symbol){
                     elementSort();
                     life--;
                     SoundExplosion.play();
@@ -99,7 +98,7 @@ elemento = {
             context.fillStyle = "#890305";
             context.textAlign = "center";
             context.font = "25px Passion One, Arial";
-            context.fillText(obs.simbol, (obs.x+obs.width/2)-10, (obs.y+obs.height/2)-5);
+            context.fillText(obs.symbol, (obs.x+obs.width/2)-10, (obs.y+obs.height/2)-5);
         }
     },
 
@@ -114,9 +113,9 @@ elemento = {
                 this._obs.splice(i, 1);
                 tam--;
                 i--;
-                if(life > 0 && obs.simbol == quiz.simbol){
+                if(life > 0 && obs.symbol == quiz.symbol){
                     score++;
-                    elemento._obs = [];
+                    elementObj._obs = [];
                     GRAVITY += 0.1;
                     elementSort();
                     SoundUp.play();
@@ -162,7 +161,7 @@ panel = {
 function elementSort(){
     var rand = Math.floor(PeriodTable.length * Math.random());
     quiz.name = PeriodTable[rand].name;
-    quiz.simbol = PeriodTable[rand].id;
+    quiz.symbol = PeriodTable[rand].id;
 }
 
 function play(){
@@ -188,19 +187,19 @@ function play(){
         canvas.onclick = function(event){
             score = 0;
             life = 3;
-            elemento._obs = [];
+            elementObj._obs = [];
             aux = 0;
             GRAVITY = 2;
             elementSort();
             GameStatus = Status.playing;
         }
     }else if(GameStatus == Status.playing){
-        elemento.draw();
-        elemento.update();
+        elementObj.draw();
+        elementObj.update();
         SoundIntro.pause();
         SoundBackground.play();
         canvas.onclick = function(event){
-            elemento.click(event);
+            elementObj.click(event);
         }
     }
 
@@ -208,8 +207,8 @@ function play(){
 }
 
 function main(){
-	ALTURA = window.innerHeight;
-	LARGURA = window.innerWidth;
+	HEIGHT = window.innerHeight;
+	WIDTH = window.innerWidth;
 
 	canvas = document.createElement("canvas");
 	canvas.width = 1000;
@@ -227,5 +226,5 @@ function main(){
 	play();
 }
 
-//Inicia o jogo
+// Start Game
 main();
